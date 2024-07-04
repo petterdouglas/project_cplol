@@ -4,6 +4,8 @@ import validator from 'validator'
 
 import '../styles/form.sass'
 
+import bgForm from '../assets/bg-form.jpg'
+
 const Form = () => {
 
   const { register, handleSubmit, formState: { errors }, } = useForm()
@@ -13,7 +15,7 @@ const Form = () => {
   }
 
   return (
-    <div className='form_container'>
+    <div className='form_container' style={{backgroundImage: `url(${bgForm})`}}>
       <div className="form-title"><h1>Formulário</h1></div>
 
       <form className="form_contents" onSubmit={handleSubmit(onSubmit)}>
