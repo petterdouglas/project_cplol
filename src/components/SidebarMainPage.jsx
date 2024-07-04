@@ -44,7 +44,7 @@ const Sidebar = ({ active, setBar }) => {
           <Link onClick={closeSidebar} to='howpage' smooth='true' duration={100} offset={-40}>Funcionamento</Link>
         </div>
         <div>
-          <NavLink onClick={closeSidebar} to='form' smooth='true' duration={100} >Quero me inscrever</NavLink>
+          <NavLink className='navlink' onClick={closeSidebar} to='form' smooth='true' duration={100} >Quero me inscrever</NavLink>
         </div>
       </section>
     </aside>
