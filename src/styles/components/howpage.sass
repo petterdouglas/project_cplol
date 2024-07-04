@@ -1,0 +1,128 @@
+@use '../variables'
+@use '../mixins'
+
+.howpage_container
+    height: 500px
+    width: 100%
+    background-image: url(src/assets/bg-vex.png)
+    background-size: cover
+    background-position: 20%
+    background-repeat: no-repeat
+    position: relative
+
+    &::before
+        position: absolute
+        top: 0
+        @include mixins.opacity
+        height: 100%
+
+    .howpage_contents
+        @include mixins.flex-center
+        flex-direction: column
+        position: relative
+        z-index: 1
+        width: 100%
+        height: 100%
+
+        &::before
+            position: absolute
+            left: 0
+            z-index: 1
+            width: 100%
+            height: 100%
+            content: ''
+            background-image: url('src/assets/vex.webp')
+            background-size: 200px
+            background-repeat: no-repeat
+            background-position: -70px 70%
+
+        .howpage_contents-title
+            position: relative
+            z-index: 2
+            width: 100%
+            padding: 14px 0
+            text-align: center
+            color: variables.$color-primary
+            @include mixins.Carter
+            font-size: 28px
+            text-shadow: -4px 4px black
+
+        .howpage_contents-side
+            position: relative
+            z-index: 2
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+            gap: 10px
+            margin-left: auto
+            height: 65%
+            width: 70%
+            background-color: variables.$bg
+            padding: 24px
+            border-radius: 25px 0 0 25px
+            @include mixins.Russo
+            font-size: 12px
+            color: #eee9ff
+
+            span
+                color: variables.$color-primary
+
+            #span_apart
+                color: variables.$color-secondary
+                font-family: Calibri
+
+            ul
+                list-style: none
+                li
+                    font-family: Calibri
+                    display: flex
+                    gap: 10px
+
+        .howpage_contents-btn
+            align-self: center
+            margin-top: 10px
+            width: 130px
+            @include mixins.flex-center
+            @include mixins.Russo
+            color: variables.$color-btn
+            background-color: variables.$color-primary
+            padding: 8px
+            border-radius: 20px
+            font-size: 14px
+            border: none
+            text-transform: uppercase
+            text-decoration: none
+            border: none
+            cursor: pointer
+
+@media (min-width: 740px)
+    .howpage_container
+        height: 560px
+        .howpage_contents
+            gap: 26px
+            &::before
+                background-size: 300px
+            .howpage_contents-title
+                font-size: 40px
+            .howpage_contents-side
+                font-size: 16px
+            .howpage_contents-btn
+                width: 180px
+                height: 40px
+                font-size: 18px
+
+@media (min-width: 1024px)
+    .howpage_container
+        height: 560px
+        .howpage_contents
+            gap: 24px
+            &::before
+                background-size: 360px
+            .howpage_contents-title
+                font-size: 50px
+            .howpage_contents-side
+                font-size: 18px
+            .howpage_contents-btn
+                width: 200px
+                height: 46px
+                font-size: 20px

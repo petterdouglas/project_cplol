@@ -1,0 +1,53 @@
+@use '../variables'
+@use '../mixins'
+
+.contacts_container
+    width: 100%
+    height: 100px
+    background-image: url('src/assets/bg.png')
+    background-repeat: no-repeat
+    background-size: cover
+
+    .contacts_contents
+        width: 100%
+        height: 100%
+        padding-top: 35px
+        @include mixins.flex-center
+        flex-direction: column
+        gap: 20px
+        position: relative
+
+        .contacts_contents-title
+            @include mixins.flex-center
+            position: absolute
+            top: 0
+            text-align: center
+            text-transform: uppercase
+            background-color: variables.$bg
+            width: 100%
+            height: 35px
+            color: variables.$color-primary
+            @include mixins.Russo
+
+        .contacts-icons_container
+            @include mixins.flex-center
+            gap: 20px
+
+            img
+                width: 28px
+                border-radius: 50%
+                background-color: variables.$bg
+                border: 2px solid variables.$bg
+
+@media (min-width: 740px)
+    .contacts_container
+        height: 120px
+        .contacts_contents
+            padding-top: 50px
+            .contacts_contents-title
+                height: 50px
+                font-size: 22px
+
+            .contacts-icons_container
+                img
+                    width: 34px

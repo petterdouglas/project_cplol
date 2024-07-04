@@ -1,0 +1,227 @@
+@use 'variables'
+@use 'mixins'
+
+.form_container
+    flex: 1
+    @include mixins.flex-center
+    justify-content: start
+    flex-direction: column
+    width: 100%
+    background-image: url('src/assets/bg-form.jpg')
+    background-size: cover
+    background-position: top-left
+    padding: 24px
+    position: relative
+    gap: 20px
+
+    &::before
+        position: absolute
+        top: 0
+        @include mixins.opacity
+        height: 100%
+        background: rgba(40, 48, 70, 0.7)
+
+    .form-title
+        @include mixins.flex-center
+        position: relative
+        z-index: 2
+        margin: 0 auto
+        text-align: center
+        width: 100%
+        height: 50px
+        background-color: variables.$bg
+        border-radius: 10px
+        @include mixins.Carter
+        font-size: 14px
+        letter-spacing: 2px
+        color: variables.$color-primary
+        text-shadow: -3px 3px black
+
+    .form_contents
+        display: flex
+        flex-direction: column
+        position: relative
+        z-index: 2
+        width: 100%
+        height: fit-content
+        padding: 24px
+        background-color: variables.$bg
+        border-radius: 10px
+
+        .form_questions
+            display: flex
+            flex-direction: column
+            gap: 10px
+            margin-bottom: 30px
+            padding-bottom: 18px
+            border-bottom: 1px dotted variables.$color-primary
+
+            &:last-of-type
+                margin-bottom: 0
+                padding-bottom: 18px
+                border: none
+
+            label, h2
+                color: variables.$color-secondary
+                @include mixins.Fjalla
+                font-size: 13px
+
+            .members
+                color: variables.$color-primary
+                @include mixins.Fjalla
+                font-size: 14px
+
+            .members-label
+                font-size: 12px
+                color: variables.$color-third
+
+            .upload-label
+                @include mixins.flex-center
+                gap: 5px
+                margin-top: 10px
+                @include mixins.Fjalla
+                font-size: 10px
+                background-color: #2f3042
+                width: 120px
+                height: 30px
+                border-radius: 20px
+                cursor: pointer
+                img
+                    width: 20px
+
+            .upload-error
+                border: 1px solid rgb(129, 0, 0)
+                @include mixins.flex-center
+                gap: 5px
+                margin-top: 10px
+                @include mixins.Fjalla
+                font-size: 10px
+                background-color: #2f3042
+                width: 120px
+                height: 30px
+                border-radius: 20px
+                cursor: pointer
+                img
+                    width: 20px
+
+            input
+                background-color: variables.$bg-dark
+                border: .5px solid rgba(185, 166, 68, .3)
+                border-radius: 5px
+                width: 100%
+                padding: 5px 0 5px 10px
+                color: variables.$color-secondary
+
+                &:focus
+                    outline: none
+
+            input[type="file"]
+                display: none
+
+            .input-error
+                background-color: variables.$bg-dark
+                border: .5px solid rgb(129, 0, 0)
+                border-radius: 5px
+                width: 100%
+                padding: 5px 0 5px 10px
+                color: variables.$color-secondary
+
+            ul
+                display: flex
+                flex-direction: column
+                gap: 10px
+                li
+                    list-style: none
+                    display: flex
+                    flex-direction: column
+                    gap: 18px
+                    margin-bottom: 18px
+
+                .member_data
+                    width: 100%
+                    margin: auto
+                    display: flex
+                    gap: 10px
+                    justify-content: space-evenly
+
+                    &-name, &-nick, &-pos
+                        display: flex
+                        flex-direction: column
+                        gap: 10px
+
+        .form_btn
+            align-self: center
+            width: 100px
+            height: 30px
+            margin-top: 10px
+            background-color: variables.$color-primary
+            border-radius: 20px
+            border: none
+            color: variables.$bg
+            @include mixins.Russo
+            font-size: 16px
+            text-transform: uppercase
+            cursor: pointer
+
+@media (min-width: 740px)
+    .form_container
+        .form-title
+            width: 80%
+            height: 70px
+            font-size: 20px
+
+        .form_contents
+            width: 80%
+            .form_questions
+                label, h2, .members
+                    font-size: 18px
+
+                .members-label
+                    font-size: 16px
+
+                .upload-label
+                    width: 180px
+                    font-size: 14px
+                .upload-error
+                    width: 180px
+                    font-size: 14px
+
+                input, .input-error
+                    padding: 8px 0 8px 10px
+
+            .form_btn
+                font-size: 20px
+                height: 38px
+                width: 150px
+
+@media (min-width: 1024px)
+    .form_container
+        .form-title
+            height: 100px
+            font-size: 26px
+
+        .form_contents
+            .form_questions
+                gap: 20px
+                label, h2, .members
+                    font-size: 20px
+
+                .members-label
+                    font-size: 18px
+
+                .upload-label
+                    width: 180px
+                    height: 40px
+                    font-size: 16px
+                .upload-error
+                    width: 180px
+                    height: 40px
+                    font-size: 16px
+
+                input, .input-error
+                    padding: 10px 0 10px 10px
+
+            .form_btn
+                font-size: 22px
+                height: 42px
+                width: 180px

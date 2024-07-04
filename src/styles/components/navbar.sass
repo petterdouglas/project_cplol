@@ -1,0 +1,52 @@
+@use '../variables.sass'
+@use '../mixins.sass'
+
+nav
+    position: fixed
+    z-index: 3
+    height: 50px
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 0 16px 0 0
+    background-color: variables.$bg
+    box-shadow: 0 0 14px .2px variables.$color-fourth
+
+    .title_container
+        @include mixins.flex-center
+        justify-content: start
+        flex-direction: row
+
+        .title
+            color: variables.$color-primary
+            @include mixins.Russo
+            text-decoration: none
+            font-size: 26px
+
+        .logo
+            width: 60px
+
+    .bar
+        width: 20px
+        height: 20px
+        position: absolute
+        right: 16px
+        fill: variables.$color-primary
+        cursor: pointer
+
+@media (min-width: 740px)
+    nav
+        height: 70px
+
+        .title_container
+            .title
+                font-size: 32px
+            
+            .logo
+                width: 70px
+
+        .bar
+            width: 1.5em
+            height: 1.5em

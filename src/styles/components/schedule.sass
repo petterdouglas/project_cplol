@@ -1,0 +1,89 @@
+@use '../variables'
+@use '../mixins'
+
+.schedule_container
+    height: 360px
+    width: 100%
+    background-image: url(src/assets/bg-progamação.jpeg)
+    background-size: cover
+    background-position: 20%
+    background-repeat: no-repeat
+    position: relative
+
+    &::before
+        position: absolute
+        top: 0
+        @include mixins.opacity
+        height: 100%
+        background: rgba(40, 42, 60, 0.8)
+
+    .schedule_contents
+        width: 100%
+        height: 100%
+        position: relative
+        z-index: 2
+        @include mixins.flex-center
+        flex-direction: column
+        gap: 30px
+
+        .schedule_contents-title
+            @include mixins.Carter
+            color: variables.$color-primary
+            font-size: 30px
+            text-shadow: -4px 4px black
+
+        ul
+            width: 90%
+            height: fit-content
+            list-style: none
+            @include mixins.flex-center
+            justify-content: space-evenly
+            gap: 30px
+            flex-wrap: wrap
+
+            li
+                @include mixins.Pirata
+                width: 40%
+                height: 85px
+                background-color: variables.$color-btn
+                @include mixins.flex-center
+                flex-direction: column
+                border-radius: 30px
+                font-size: 18px
+
+                .schedule_contents-dates
+                    color: variables.$color-secondary
+
+                .schedule_contents-case
+                    color: variables.$color-primary
+
+@media (min-width: 768px)
+    .schedule_container
+        height: 460px
+        .schedule_contents
+            ul
+                gap: 30px
+
+                li
+                    width: 40%
+                    height: 120px
+                    font-size: 22px
+
+            .schedule_contents-title
+                font-size: 40px
+
+@media (min-width: 1024px)
+    .schedule_container
+        height: 520px
+        .schedule_contents
+            ul
+                width: 70%
+                gap: 30px
+
+                li
+                    width: 35%
+                    height: 120px
+                    font-size: 28px
+
+            .schedule_contents-title
+                font-size: 50px

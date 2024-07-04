@@ -1,0 +1,24 @@
+@use '../variables'
+@use '../mixins'
+
+footer
+    @include mixins.flex-center
+    background-color: variables.$bg
+    padding: 12px
+    color: variables.$color-primary
+    
+    span
+        font-size: 9px
+        font-family: Calibri
+
+@media (min-width: 740px)
+    footer
+        padding: 18px
+
+        span
+            font-size: 12px
+
+@media (min-width: 1024px)
+    footer
+        span
+            font-size: 14px

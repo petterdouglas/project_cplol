@@ -1,0 +1,80 @@
+@use './variables'
+@use './mixins'
+
+main
+    margin-top: 50px
+    display: flex
+    flex-direction: column
+    flex: 1
+    background-color: variables.$bg
+
+aside
+    position: fixed
+    z-index: 3
+    right: 0
+    top: 0
+    width: 55%
+    height: fit-content
+    border-radius: 0 0 0 10px
+    background-color: variables.$color-btn
+
+    .btn_container
+        width: 100%
+        height: 50px
+        @include mixins.flex-center
+        .bar
+            width: 20px
+            height: 20px
+            position: absolute
+            right: 16px
+            fill: variables.$color-primary
+            cursor: pointer
+
+    .aside_contents
+        padding: 0 20px 30px 20px
+        margin-top: 10px
+        @include mixins.flex-center
+        flex-direction: column
+        gap: 20px
+
+        div
+            @include mixins.flex-center
+            height: 30px
+            width: 90%
+            border-bottom: 1px solid
+            color: variables.$color-primary
+            cursor: pointer
+
+            &:hover
+                border-radius: 20px
+                color: variables.$bg
+                background-color: variables.$color-primary
+
+            a
+                @include mixins.flex-center
+                text-decoration: none
+                @include mixins.Russo
+                font-size: 12px
+                width: 100%
+                height: 100%
+
+                &:visited
+                    color: inherit
+
+@media (min-width: 740px)
+    main
+        margin-top: 70px
+    aside
+        width: 40%
+
+        .btn_container
+            height: 70px
+            .bar
+                width: 1.5em
+                height: 1.5em
+
+        .aside_contents
+            div
+                height: 50px
+                a
+                    font-size: 16px
