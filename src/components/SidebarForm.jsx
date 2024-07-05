@@ -29,7 +29,7 @@ const Sidebar = ({ active, setBar }) => {
       </div>
       <section className='aside_contents'>
         <div>
-          <NavLink onClick={closeSidebar} to='/' smooth='true' duration={500} >Home</NavLink>
+          <NavLink className='navlink' onClick={closeSidebar} to='/' smooth='true' duration={500} >Home</NavLink>
         </div>
       </section>
     </aside>
