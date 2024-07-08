@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import Home from '../components/Home'
 import Awards from '../components/Awards'
 import Schedule from '../components/Schedule'
@@ -9,6 +11,10 @@ import bgHowpage from '../assets/bg-vex.png'
 import bgSchedule from '../assets/bg-progamação.jpeg'
 
 const MainPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
 
   return (
     <>

@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import validator from 'validator'
 
@@ -8,6 +9,10 @@ import bgForm from '../assets/bg-form.jpg'
 import upload from '../assets/upload-icon.png'
 
 const Form = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
 
   const { register, handleSubmit, formState: { errors }, } = useForm()
 

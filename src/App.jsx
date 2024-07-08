@@ -15,10 +15,6 @@ function App() {
   const location = useLocation()
   const [sidebar, setSidebar] = useState(false)
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, []);
-
   const renderSidebar = () => {
     if (location.pathname === "/") {
       return (<SidebarMainPage active={sidebar} setBar={setSidebar} />)
