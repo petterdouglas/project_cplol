@@ -8,11 +8,7 @@ const port = process.env.PORT || 3000
 
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ limit: '10mb', extended: true }))
-app.use(cors({
-    origin: 'https://project-cplol.vercel.app', // Ou o endereço da sua aplicação frontend
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
-    allowedHeaders: ['Content-Type', 'Authorization'] // Cabeçalhos permitidos
-}))
+app.use(cors())
 
 app.post('/form', async (req, res) => {
     await prisma.team.create({
