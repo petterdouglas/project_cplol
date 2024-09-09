@@ -37,8 +37,8 @@ app.post('/form', async (req, res) => {
     res.status(201).json(req.body)
 })
 
-app.get('/', async (req, res) => {
-    await res.status(200).send("ONLINE")
+app.get('/', (req, res) => {
+    res.status(200).send("ONLINE")
 })
 
 app.listen(port)
