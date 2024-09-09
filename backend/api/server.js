@@ -4,7 +4,7 @@ import cors from 'cors'
 
 const app = express()
 const prisma = new PrismaClient()
-const port = process.env.PORT ?? 3000
+const port = process.env.PORT || 3000
 
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ limit: '10mb', extended: true }))
