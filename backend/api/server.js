@@ -4,6 +4,7 @@ import cors from 'cors'
 
 const app = express()
 const prisma = new PrismaClient()
+const port = process.env.PORT || 3000
 
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ limit: '10mb', extended: true }))
@@ -84,4 +85,4 @@ app.delete('/form/:name', async (req, res) => {
     res.status(200).json({ message: "Time deletado com sucesso!" })
 })
 
-app.listen(3000)
+app.listen(port)
