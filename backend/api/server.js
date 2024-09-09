@@ -37,8 +37,9 @@ app.post('/form', async (req, res) => {
     res.status(201).json(req.body)
 })
 
-app.get('/', (req, res) => {
-    res.status(200).send("ONLINE")
+app.get('/', async (req, res) => {
+    const teams = await prisma.team.findMany()
+    res.status(200).json(teams)
 })
 
 app.listen(port)
