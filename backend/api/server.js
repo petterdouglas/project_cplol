@@ -4,7 +4,7 @@ import cors from 'cors'
 
 const app = express()
 const prisma = new PrismaClient()
-const port = process.env.PORT || 3000
+const port = process.env.PORT ?? 3000
 
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ limit: '10mb', extended: true }))
@@ -35,6 +35,10 @@ app.post('/form', async (req, res) => {
         }
     })
     res.status(201).json(req.body)
+})
+
+app.get('/', async (req, res) => {
+    await res.status(200).send("ONLINE")
 })
 
 app.listen(port)
