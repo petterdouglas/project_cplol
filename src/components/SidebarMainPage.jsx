@@ -17,7 +17,6 @@ const Sidebar = ({ active, setBar }) => {
         setBar(false)
       }
     }
-    console.log('ativei')
     document.addEventListener('mousedown', handleClickOutside)
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)

@@ -1,5 +1,3 @@
-import { NavLink } from 'react-router-dom'
-
 import '../styles/components/contacts.sass'
 
 import bgContacts from '../assets/bg.png'
@@ -9,7 +7,7 @@ import whatsapp from '../assets/whats-icon.png'
 
 const Contacts = () => {
   return (
-    <section className="contacts_container" style={{backgroundImage: `url(${bgContacts})`}} id='contacts'>
+    <section className="contacts_container" style={{ backgroundImage: `url(${bgContacts})` }} id='contacts'>
       <div className="contacts_contents">
         <div className="contacts_contents-title"><h1></h1>Entre em contato</div>
         <div className="contacts-icons_container">

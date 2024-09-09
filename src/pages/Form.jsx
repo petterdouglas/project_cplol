@@ -1,7 +1,8 @@
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import validator from 'validator'
+import api from '../services/api'
 
 import '../styles/form.sass'
 
@@ -10,14 +11,74 @@ import upload from '../assets/upload-icon.png'
 
 const Form = () => {
 
+  const [base64Logo, setBase64Logo] = useState(null)
+
+  async function postTeams(team) {
+    await api.post('/form', {
+      email: team.email,
+      name: team.name,
+      leadNick: team.nick,
+      name1: team.member1Name,
+      member1: team.member1Nick,
+      position1: team.member1Pos,
+      name2: team.member2Name,
+      member2: team.member2Nick,
+      position2: team.member2Pos,
+      name3: team.member3Name,
+      member3: team.member3Nick,
+      position3: team.member3Pos,
+      name4: team.member4Name,
+      member4: team.member4Nick,
+      position4: team.member4Pos,
+      name5: team.member5Name,
+      member5: team.member5Nick,
+      position5: team.member5Pos,
+      icon: team.logo,
+    })
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, []);
+  }, [])
 
-  const { register, handleSubmit, formState: { errors }, } = useForm()
 
-  const onSubmit = (data) => {
-    console.log(data)
+  const { register, handleSubmit, reset, formState: { errors }, } = useForm()
+
+  const onSubmit = async (team) => {
+    try {
+      await postTeams({
+        ...team,
+        logo: base64Logo
+      })
+      alert('Formulário enviado com sucesso!')
+      reset()
+      setBase64Logo(null)
+
+    } catch (error) {
+      console.error('Erro ao enviar o formulário:', error);
+      alert('Houve um problema ao enviar o formulário!');
+    }
+  }
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0]
+    if (file) {
+      const reader = new FileReader()
+
+      reader.onloadend = () => {
+        // Garante que `reader.result` é uma string
+        if (typeof reader.result === 'string') {
+          setBase64Logo(reader.result)
+        }
+      }
+
+      reader.onerror = (error) => {
+        console.error('Erro ao ler o arquivo:', error)
+      }
+
+      // Inicia a leitura do arquivo como uma URL de dados Base64
+      reader.readAsDataURL(file)
+    }
   }
 
   return (
@@ -130,7 +191,7 @@ const Form = () => {
         <div className="form_questions">
           <h2>Envie em formato (.png) o ícone da sua equipe:</h2>
           <label className={errors?.logo ? 'upload-error' : 'upload-label'} htmlFor='logo'><img src={upload} alt="" /> Adicionar arquivo</label>
-          <input type='file' id='logo' {...register('logo', { required: true })} />
+          <input type='file' id='logo' {...register('logo', { required: true })} onChange={handleFileChange} />
         </div>
         <button className='form_btn' type="submit" >Enviar</button>
       </form>

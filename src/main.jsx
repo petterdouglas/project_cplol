@@ -1,16 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import './styles/main.sass'
-import MainPage from './routes/MainPage.jsx'
-import Form from './routes/Form.jsx'
-import ErrorPage from './routes/ErrorPage.jsx'
-import Home from './components/Home.jsx'
-import Awards from './components/Awards.jsx'
-import Schedule from './components/Schedule.jsx'
-import HowPage from './components/HowPage.jsx'
+
+import App from './App.jsx'
+import MainPage from './pages/MainPage.jsx'
+import Form from './pages/Form.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,7 +20,7 @@ const router = createBrowserRouter([
         element: <MainPage />,
       },
       {
-        path: 'form',
+        path: '/form',
         element: <Form />
       },
     ],

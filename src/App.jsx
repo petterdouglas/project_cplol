@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 
 import SidebarMainPage from './components/SidebarMainPage'
@@ -26,7 +26,7 @@ function App() {
   return (
     <>
       <Navbar setBar={setSidebar} nonActive={sidebar} />
-      {sidebar == true && renderSidebar()}
+      {sidebar === true && renderSidebar()}
       <main>
         <Outlet />
         <Contacts />
