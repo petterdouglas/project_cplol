@@ -2,7 +2,9 @@
   "name": "api",
   "version": "1.0.0",
   "type": "module",
-  "engines": {"node": "14.x"},
+  "engines": {
+    "node": "20.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
