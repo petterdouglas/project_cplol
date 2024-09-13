@@ -11,7 +11,7 @@ const HowPage = () => {
         <p>Nº máximo de participantes: <span>35</span></p>
         <ul>
           <li><span>&gt; </span> <p>Cada equipe deve ter um líder responsável pela inscrição do grupo</p></li>
-          <li><span>&gt; </span> <p>O e-mail do líder deve ser disponibilizado para contatop</p></li>
+          <li><span>&gt; </span> <p>O e-mail do líder deve ser disponibilizado para contato</p></li>
           <li><span>&gt; </span> <p>O nome, nickname e posição de rota de cada membro da equipe deve ser enviado</p></li>
           <li><span>&gt; </span> <p>Após a confirmação das inscrições, maiores informações serão disponibilizadas pelo e-mail</p></li>
           <li><span>&gt;</span> <p>Cada equipe deve ter um líder responsável pela inscrição do grupo</p></li>
