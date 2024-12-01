@@ -7,7 +7,7 @@ const HowPage = () => {
     <div className="howpage_contents">
       <h1 className='howpage_contents-title'>Como funcionará?</h1>
       <div className="howpage_contents-side">
-        <p>Inscrições: <span>25 reais</span> <span id='span_apart'>(5 reais por integrante)</span></p>
+        <p>Inscrições: <span>Gratuitas</span></p>
         <p>Nº máximo de participantes: <span>35</span></p>
         <ul>
           <li><span>&gt; </span> <p>Cada equipe deve ter um líder responsável pela inscrição do grupo</p></li>

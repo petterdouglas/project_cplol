@@ -1,0 +1,1 @@
+{"version":3,"sources":["footer.sass","../mixins.sass","../variables.sass","footer.css"],"names":[],"mappings":"AAGA;ECFI,aAAA;EACA,uBAAA;EACA,mBAAA;EDEA,yBECC;EFAD,aAAA;EACA,wBENY;ACMhB;AHEI;EACI,cAAA;EACA,oBAAA;AGAR;;AHEA;EACI;IACI,aAAA;EGCN;EHCM;IACI,eAAA;EGCV;AACF;AHAA;EAEQ;IACI,eAAA;EGCV;AACF","file":"footer.css"}

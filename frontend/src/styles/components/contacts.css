@@ -1,0 +1,61 @@
+.contacts_container {
+  width: 100%;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contacts_container .contacts_contents {
+  width: 100%;
+  height: 100%;
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.contacts_container .contacts_contents .contacts_contents-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #1C1D2C;
+  width: 100%;
+  height: 35px;
+  color: rgb(185, 166, 68);
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.contacts_container .contacts_contents .contacts-icons_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.contacts_container .contacts_contents .contacts-icons_container img {
+  width: 28px;
+  border-radius: 50%;
+  background-color: #1C1D2C;
+  border: 2px solid #1C1D2C;
+}
+
+@media (min-width: 740px) {
+  .contacts_container {
+    height: 120px;
+  }
+  .contacts_container .contacts_contents {
+    padding-top: 50px;
+  }
+  .contacts_container .contacts_contents .contacts_contents-title {
+    height: 50px;
+    font-size: 22px;
+  }
+  .contacts_container .contacts_contents .contacts-icons_container img {
+    width: 34px;
+  }
+}/*# sourceMappingURL=contacts.css.map */

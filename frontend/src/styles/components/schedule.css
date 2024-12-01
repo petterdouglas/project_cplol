@@ -1,0 +1,104 @@
+.schedule_container {
+  height: 360px;
+  width: 100%;
+  background-size: cover;
+  background-position: 20%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.schedule_container::before {
+  position: absolute;
+  top: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: rgba(33, 35, 46, 0.8);
+  z-index: 1;
+  height: 100%;
+  background: rgba(40, 42, 60, 0.8);
+}
+.schedule_container .schedule_contents {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.schedule_container .schedule_contents .schedule_contents-title {
+  font-family: "Carter One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(185, 166, 68);
+  font-size: 30px;
+  text-shadow: -4px 4px black;
+}
+.schedule_container .schedule_contents ul {
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.schedule_container .schedule_contents ul li {
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  width: 40%;
+  height: 85px;
+  background-color: #1C1D2C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 30px;
+  font-size: 18px;
+}
+.schedule_container .schedule_contents ul li .schedule_contents-dates {
+  color: #F0E4A6;
+}
+.schedule_container .schedule_contents ul li .schedule_contents-case {
+  color: rgb(185, 166, 68);
+}
+
+@media (min-width: 768px) {
+  .schedule_container {
+    height: 460px;
+  }
+  .schedule_container .schedule_contents ul {
+    gap: 30px;
+  }
+  .schedule_container .schedule_contents ul li {
+    width: 40%;
+    height: 120px;
+    font-size: 22px;
+  }
+  .schedule_container .schedule_contents .schedule_contents-title {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .schedule_container {
+    height: 520px;
+  }
+  .schedule_container .schedule_contents ul {
+    width: 70%;
+    gap: 30px;
+  }
+  .schedule_container .schedule_contents ul li {
+    width: 35%;
+    height: 120px;
+    font-size: 28px;
+  }
+  .schedule_container .schedule_contents .schedule_contents-title {
+    font-size: 50px;
+  }
+}/*# sourceMappingURL=schedule.css.map */

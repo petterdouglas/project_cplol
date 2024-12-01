@@ -37,10 +37,12 @@
         .awards_contents-side
             width: 55%
             margin-right: 20px
+            height: 100%
             display: flex
             flex-direction: column
             gap: 8px
             align-items: center
+            justify-content: center
             text-align: center
 
             .awards_contents-title
@@ -51,14 +53,13 @@
 
             .awards_contents-square
                 width: 100%
-                height: 120px
                 background-color: variables.$color-btn
-                position: relative
                 border-radius: 20px
-                @include mixins.flex-center
-                gap: 10px
-                flex-direction: column
+                gap: 4px
                 color: variables.$color-secondary
+                display: flex
+                flex-direction: column
+                justify-content: center
                 @include mixins.Russo
 
                 span
@@ -76,11 +77,38 @@
                 border: none
                 text-transform: uppercase
                 text-decoration: none
-                border: none
 
                 &:hover
                     background-color: variables.$color-primary
                     color: variables.$color-btn
+
+@media (min-width: 370px)
+    .awards_container
+        .awards_contents
+            &::before
+                position: absolute
+                left: 0
+                z-index: 1
+                width: 54%
+                height: 100%
+                content: ''
+                background-image: url('/assets/Malphite.webp')
+                background-size: 85%
+                background-repeat: no-repeat
+                background-position: 0
+            .awards_contents-side
+                .awards_contents-square
+                    width: 100%
+                    height: 180px
+                    font-size: 12px
+                    padding: 0 16px 0 
+                    background-color: variables.$color-btn
+                    border-radius: 20px
+                    color: variables.$color-secondary
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    @include mixins.Russo
 
 @media (min-width: 740px)
     .awards_container
@@ -98,7 +126,7 @@
 
                 .awards_contents-square
                     height: 160px
-                    font-size: 18px
+                    font-size: 16px
 
                 .awards_contents-btn
                     width: 180px
@@ -118,7 +146,7 @@
                     font-size: 50px
 
                 .awards_contents-square
-                    height: 160px
+                    height: 220px
                     font-size: 24px
 
                 .awards_contents-btn

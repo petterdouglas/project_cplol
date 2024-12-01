@@ -1,0 +1,59 @@
+nav {
+  position: fixed;
+  z-index: 3;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 0 0;
+  background-color: #1C1D2C;
+  box-shadow: 0 0 14px 0.2px #151414;
+}
+nav .title_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+}
+nav .title_container .title {
+  color: rgb(185, 166, 68);
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 26px;
+}
+nav .title_container .logo {
+  width: 60px;
+}
+nav .bar {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 16px;
+  fill: rgb(185, 166, 68);
+  cursor: pointer;
+}
+
+@media (min-width: 740px) {
+  nav {
+    height: 70px;
+  }
+  nav .title_container {
+    margin-left: 10px;
+  }
+  nav .title_container .title {
+    font-size: 32px;
+  }
+  nav .title_container .logo {
+    width: 70px;
+  }
+  nav .bar {
+    width: 2.5em;
+    height: 1.5em;
+    right: 20px;
+  }
+}/*# sourceMappingURL=navbar.css.map */

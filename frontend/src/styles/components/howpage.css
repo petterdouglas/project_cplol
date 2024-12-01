@@ -1,0 +1,157 @@
+.howpage_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 520px;
+  width: 100%;
+  background-size: cover;
+  background-position: 20%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.howpage_container::before {
+  position: absolute;
+  top: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: rgba(33, 35, 46, 0.8);
+  z-index: 1;
+  height: 100%;
+}
+.howpage_container .howpage_contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 85%;
+}
+.howpage_container .howpage_contents::before {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url("/assets/vex.webp");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: -70px 70%;
+}
+.howpage_container .howpage_contents .howpage_contents-title {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 14px 0;
+  text-align: center;
+  color: rgb(185, 166, 68);
+  font-family: "Carter One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-shadow: -4px 4px black;
+}
+.howpage_container .howpage_contents .howpage_contents-side {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-left: auto;
+  height: 90%;
+  width: 70%;
+  background-color: #1C1D2C;
+  padding: 24px;
+  border-radius: 25px 0 0 25px;
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  color: #eee9ff;
+}
+.howpage_container .howpage_contents .howpage_contents-side span {
+  color: rgb(185, 166, 68);
+}
+.howpage_container .howpage_contents .howpage_contents-side #span_apart {
+  color: #F0E4A6;
+  font-family: Calibri;
+}
+.howpage_container .howpage_contents .howpage_contents-side ul {
+  list-style: none;
+}
+.howpage_container .howpage_contents .howpage_contents-side ul li {
+  font-family: Calibri;
+  display: flex;
+  gap: 10px;
+}
+.howpage_container .howpage_contents .howpage_contents-btn {
+  align-self: center;
+  margin-top: 10px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #1C1D2C;
+  background-color: rgb(185, 166, 68);
+  padding: 8px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 740px) {
+  .howpage_container {
+    height: 560px;
+  }
+  .howpage_container .howpage_contents {
+    gap: 26px;
+  }
+  .howpage_container .howpage_contents::before {
+    background-size: 300px;
+  }
+  .howpage_container .howpage_contents .howpage_contents-title {
+    font-size: 40px;
+  }
+  .howpage_container .howpage_contents .howpage_contents-side {
+    font-size: 16px;
+  }
+  .howpage_container .howpage_contents .howpage_contents-btn {
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .howpage_container {
+    height: 680px;
+  }
+  .howpage_container .howpage_contents {
+    gap: 26px;
+  }
+  .howpage_container .howpage_contents::before {
+    background-size: 360px;
+  }
+  .howpage_container .howpage_contents .howpage_contents-title {
+    font-size: 50px;
+  }
+  .howpage_container .howpage_contents .howpage_contents-side {
+    padding: 40px;
+    font-size: 20px;
+  }
+  .howpage_container .howpage_contents .howpage_contents-btn {
+    width: 200px;
+    height: 46px;
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=howpage.css.map */

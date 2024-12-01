@@ -1,0 +1,26 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1C1D2C;
+  padding: 12px;
+  color: rgb(185, 166, 68);
+}
+footer span {
+  font-size: 9px;
+  font-family: Calibri;
+}
+
+@media (min-width: 740px) {
+  footer {
+    padding: 18px;
+  }
+  footer span {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  footer span {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=footer.css.map */
